@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escapada a Bratislava y Viena</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./img/136881033_1db8a9bb-4888-4284-8146-8776b024d9b0.svg" type="image/x-icon">
+
+    <style type="text/tailwindcss">
+        @import "tailwindcss";
+        @theme {
+            --font-sans: "Space Grotesk", sans-serif;
+            --font-display: "Syne", sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-gradient-to-t from-[#121b2c] via-[#1a0e26] to-[#121b2c] text-[#e0e1dd] min-h-screen flex justify-center items-center p-4 md:p-8 overflow-x-hidden select-none">
+
+    <div
+        class="relative p-5 md:p-8 rounded-2xl w-full max-w-5xl bg-[#151f32]/60 backdrop-blur-md shadow-[0_25px_60px_rgba(0,0,0,0.8)] border border-[#2d3d5a]/30 flex flex-col justify-between hover:scale-105 transition-all duration-300">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 h-auto md:h-[480px]">
+
+            <div
+                class="relative w-full h-64 md:h-full bg-[#0b121f]/90 rounded-xl border border-[#dfb15b]/40 shadow-[0_0_20px_rgba(223,177,91,0.1)] flex justify-center items-center overflow-hidden">
+                <img id="carrusel-bg" src="" alt=""
+                    class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 transition-all duration-500">
+                <img id="carrusel-img" src="" alt="Imagen del lugar"
+                    class="relative z-10 max-w-full max-h-full object-contain p-3 transition-all duration-300 drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
+            </div>
+
+            <div class="flex flex-col justify-center gap-6 py-1 h-full">
+                <div>
+                    <h2 id="nombre"
+                        class="text-2xl md:text-[41px] font-black text-transparent bg-clip-text bg-gradient-to-t from-[#dfb15b] via-[#ebd095] to-[#f4f4f6] drop-shadow-[0_2px_10px_rgba(223,177,91,0.3)] mb-3 leading-tight">
+                        Cargando...
+                    </h2>
+                    <p id="descripcion"
+                        class="text-[#e0e1dd]/90 text-sm md:text-base leading-relaxed font-light max-h-[120px] overflow-y-auto pr-2">
+                    </p>
+                </div>
+
+                <div>
+                    <h3
+                        class="text-xs font-bold text-[#dfb15b] mb-2 tracking-widest uppercase border-b border-[#2d3d5a]/50 pb-1 font-mono">
+                        CARACTERÍSTICAS
+                    </h3>
+                    <ul id="caracteristicas"
+                        class="list-inside list-disc space-y-1.5 text-[#e0e1dd]/80 text-xs md:text-sm font-normal marker:text-[#dfb15b]">
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-col items-center gap-4 mt-6 pt-4 border-t border-[#2d3d5a]/30 w-full">
+            <div class="grid grid-cols-5 gap-1.5 w-full max-w-md items-center">
+                <button id="inicio"
+                    class="w-full py-2.5 rounded-lg bg-[#0b121f] hover:bg-[#2d3d5a] border border-[#2d3d5a]/60 text-[#dfb15b] text-[11px] font-mono font-bold uppercase transition-all active:scale-95 hover:scale-110 cursor-pointer text-center">
+                    |&lt;
+                </button>
+                <button id="anterior"
+                    class="w-full py-2.5 rounded-lg bg-[#dfb15b] hover:bg-[#ebd095] text-[#121b2c] font-bold text-[11px] transition-all active:scale-95 hover:scale-110 cursor-pointer shadow-[0_0_10px_rgba(223,177,91,0.1)] text-center">
+                    &lt; Ant
+                </button>
+                <button id="play"
+                    class="w-full py-2.5 rounded-lg bg-[#1a2b47] hover:bg-[#253d63] border border-[#dfb15b]/40 text-[#dfb15b] font-bold text-xs transition-all active:scale-95 hover:scale-110 cursor-pointer flex justify-center items-center shadow-[0_0_15px_rgba(26,43,71,0.5)]">
+                    <span id="play-icon">▶</span>
+                </button>
+                <button id="siguiente"
+                    class="w-full py-2.5 rounded-lg bg-[#dfb15b] hover:bg-[#ebd095] text-[#121b2c] font-bold text-[11px] transition-all active:scale-95 hover:scale-110 cursor-pointer shadow-[0_0_10px_rgba(223,177,91,0.1)] text-center">
+                    Sig &gt;
+                </button>
+                <button id="ultimo"
+                    class="w-full py-2.5 rounded-lg bg-[#0b121f] hover:bg-[#2d3d5a] border border-[#2d3d5a]/60 text-[#dfb15b] text-[11px] font-mono font-bold uppercase transition-all active:scale-95 hover:scale-110 cursor-pointer text-center">
+                    &gt;|
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
